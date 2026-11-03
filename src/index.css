@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand tokens → generate bg-forest, text-brand, border-brand-light, etc. */
+  --color-forest: #0b3d1c;       /* page frame, headline, dark buttons */
+  --color-brand: #17702b;        /* "Our Future.", CTA, active link */
+  --color-brand-light: #e6f4e8;  /* soft green tint (arrow circles, hovers) */
+  --color-ink: #2b2f36;          /* body text */
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
